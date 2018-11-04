@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RealHW1 App</string>
+    <string name="gobutton">GO</string>
 </resources>
