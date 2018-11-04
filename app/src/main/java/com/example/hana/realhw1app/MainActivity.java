@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText input;
@@ -22,14 +23,16 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View v) {
         String r = null;
 
-        // Проверяем поля на пустоту
-        if (TextUtils.isEmpty(input.getText().toString()))
-                {
-            return;
-        }
-
         if (R.id.button == v.getId()){
-            r = input.getText().toString();
+            // Проверяем поля на пустоту
+            if (TextUtils.isEmpty(input.getText().toString()))
+            {
+                Toast.makeText(MainActivity.this, "Empty input", Toast.LENGTH_LONG);
+                return;
+            }
+            else {
+                r = input.getText().toString();
+            }
         }
 
         // формируем строку вывода
