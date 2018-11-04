@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
@@ -10,23 +9,30 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="95dp"
+        android:layout_weight="3"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:ems="10"
-        android:inputType="text|textPersonName"
-        android:text="Enter text" />
+        android:layout_width="wrap_content"
+        android:ems="12"
+        android:lines="2"
+        android:hint="Enter here"
+        android:inputType="text"
+      />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="95dp"
+        android:text="@string/gobutton"
+        android:layout_weight="3"
         android:layout_height="wrap_content"
-        android:layout_weight="0.5"
-        android:text="GO" />
+        android:layout_width="wrap_content"
+        android:ems="12"
+        android:lines="2"
+        />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="92dp"
+        android:layout_weight="2"
         android:layout_height="wrap_content"
-        android:layout_weight="2" />
+        android:layout_width="wrap_content"
+        android:ems="12"
+        android:lines="2" />
 </LinearLayout>
