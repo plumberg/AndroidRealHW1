@@ -21,19 +21,24 @@ public class MainActivity extends AppCompatActivity {
 
         input = (EditText) this.findViewById(R.id.editText);
         okB = (Button) this.findViewById(R.id.button);
+        result = findViewById(R.id.textView);
+
 
         okB.setOnClickListener (new View.OnClickListener ()
         {
             @Override
             public void onClick (View view)
             {
+                Toast.makeText(MainActivity.this, "Test button clicked", Toast.LENGTH_LONG);
                 String r = "";
-                Toast.makeText(MainActivity.this, "Button clicked", Toast.LENGTH_LONG);
+
                 if (R.id.button == view.getId()){
                     // Проверяем поля на пустоту
+                    //Check if input is empty
                     if (TextUtils.isEmpty(input.getText().toString()))
+
                     {
-                        Toast.makeText(MainActivity.this, "Empty input", Toast.LENGTH_LONG);
+                        Toast.makeText(MainActivity.this, "Empty input", Toast.LENGTH_LONG).show();
                         return;
                     }
                     else {
@@ -42,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 // формируем строку вывода
+                //Assigning output text
                 result.setText(r);
             }
         });
